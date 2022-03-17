@@ -5,7 +5,7 @@ from termcolor import colored
 # --- Config --- #
 NUM_TRY = 6
 VALIDATE = False
-LANG = 'en'  # currently, only supported language
+LANG = 'en'  # currently, only supported languages are en and de
 # ---        --- #
 
 
@@ -13,7 +13,7 @@ def main(filename):
     all_possible_words = np.genfromtxt(filename, delimiter='', dtype='str', usecols=[0])
     all_possible_words = np.char.upper(all_possible_words)
     correct_word = np.random.choice(all_possible_words)
-    if VALIDATE:
+    if VALIDATE:  # Only available in english
         valid_words = np.genfromtxt('word_lists/wordle-allowed-guesses.txt', delimiter='', dtype='str', usecols=[0])
         valid_words = np.char.upper(valid_words)
     for _ in range(NUM_TRY):
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     print("Try guessing a word! If a letter is correct, it appears green, if it is contained in the correct word but",
           "at another position, it's green and if it's not included in the correct word it's grey.")
     if LANG == 'de':
-        file = 'word_lists/wordle-answers-alphabetical.txt'  # CHANGE TO GERMAN as soon as available
+        file = 'word_lists/wordlist_ger.txt'
     else:
         file = 'word_lists/wordle-answers-alphabetical.txt'
     main(file)
