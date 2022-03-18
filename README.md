@@ -8,3 +8,16 @@ A small wordle clone written in python.
 You'll need Python3 installed and the packages from [requirements.txt](requirements.txt).
 
 To install all required packages use `pip install -r requirements.txt`.
+
+
+## Credits
+
+The english word lists are taken from [https://gist.github.com/cfreshman](https://gist.github.com/cfreshman): [wordle-answers-alphabetical.txt](https://gist.github.com/cfreshman/a03ef2cba789d8cf00c08f767e0fad7b) and [wordle-allowed-guesses.txt](https://gist.github.com/cfreshman/cdcdf777450c5b5301e439061d29694c)
+
+#### Contributors
+
+<a href="https://github.com/LauKr/wordle/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=LauKr/wordle" />
+</a>
+
+<!-- Made with [contrib.rocks](https://contrib.rocks). -->
